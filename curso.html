@@ -1,25 +1,63 @@
 <html>
   <head>
     <title>Mi primera pagina web </title>
-    <script>
-      alert("hola")
-    </script>
-    <script src="./curso.js" ></script>
     <style>
-      .rojo {
-        color: red;
-        font-size: 72px;
-        text-decoration: line-through;
-        font-weight: bold;
-        border: 1px solid #4e6886;
+      body {
+        padding: 0;
+        margin: 0;
+      }
+
+      .header {
+        padding: 10px;
+        width: 100%;
+        background-color: #FFF159;
+        height: 50px;
+        display: flex;
+        flex-direction: row;
+      }
+
+      .nav-logo {
+        background-image: url(https://http2.mlstatic.com/ui/navigation/5.3.7/mercadolibre/logo__large_plus.png);
+        height: 34px;
+        width: 134px;
+      }
+
+      .content {
+        background-color: #EEEEEE;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .busqueda {
+        box-shadow: 0 1px 2px 0 rgba(0,0,0,.2);
+        height: 39px;
+        border-radius: 2px;
+        background-color: #fff;
+        border: 0 rgba(0,0,0,.2);
+        padding: 7px 60px 9px 15px;
+        width: 539px;
+        margin-left: 1em;
+        font-size: 16px;
+      }
+
+      .producto {
+        width: 100%;
+        height: 50px;
+        border: 1px solid black;
+        margin: 1em;
       }
     </style>
   </head>
   <body>
-    <h1 class="rojo">Mi Primera pagina web </h1>
-    <h1 class="rojo">segungo H1</h1>
-    <hr>
-    <p>Esto tan sencillo es una verdadera página web, aunque le falta el contenido, 
-    pero todo llegará.</p>
+    <div class="header">
+      <div class="nav-logo"></div>
+      <input onchange="search();" id="input" class="busqueda" />
+    </div>
+    <div class="content" id="lista">
+
+    </div>
+    <script src="./curso.js" ></script>
   </body>
 </html> 
